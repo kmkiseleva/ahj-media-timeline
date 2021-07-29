@@ -52,11 +52,15 @@ export default class AppInterface {
         if (event.keyCode === 13) {
           event.preventDefault();
           coordinates = modalInput.value;
-          modal.classList.add('hidden');
-          const newPost = this.markupPost(time, text, coordinates);
-          const tweetsContent = document.querySelector('.tweets__content');
-          tweetsContent.insertAdjacentHTML('afterbegin', newPost);
-          event.target.value = '';
+          if (this.validateCoordinates(coordinates)) {
+            modal.classList.add('hidden');
+            const newPost = this.markupPost(time, text, coordinates);
+            const tweetsContent = document.querySelector('.tweets__content');
+            tweetsContent.insertAdjacentHTML('afterbegin', newPost);
+            event.target.value = '';
+          } else {
+            alert('Enter the coordinates of the following type: 00.00000, 0.00000');
+          }
         }
       });
     }
@@ -83,5 +87,10 @@ export default class AppInterface {
         reject(new Error("Your browser doesn't support Geolocation"));
       }
     });
+  }
+
+  validateCoordinates(value) {
+    const templateRegExp = /^\[?([-+]?\d{1,2}[.]\d+),\s*([-+]?\d{1,3}[.]\d+)\]?$/gm;
+    return templateRegExp.test(value);
   }
 }

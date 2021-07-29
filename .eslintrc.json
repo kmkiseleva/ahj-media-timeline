@@ -18,6 +18,7 @@
       "LabeledStatement",
       "WithStatement"
     ],
-    "no-unused-expressions": ["error", { "allowTernary": true }]
+    "no-unused-expressions": ["error", { "allowTernary": true }],
+    "no-alert": "off"
   }
 }
