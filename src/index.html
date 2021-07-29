@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Homeworks</title>
+  </head>
+  <body>
+    <div id="main">
+      <div class="tweets">
+        <h1 class="tweets__title">My Tweets</h1>
+        <div class="tweets__content">
+          <!-- <div class="tweets__post">
+            <div class="post__header">28/07/2021</div>
+            <div class="post__body">
+              <div class="post__text">Hello</div>
+            </div>
+            <div class="post__coordinates"><span class="post__icon"></span> [00.00000,0.00000]</div>
+          </div> -->
+        </div>
+        <div class="tweets__footer">
+          <div class="footer__container">
+            <input type="text" class="footer__input" placeholder="Make your tweet..." />
+          </div>
+        </div>
+      </div>
+      <div class="modal hidden">
+        <div class="modal__background"></div>
+        <div class="modal__content">
+          <div class="modal__body">
+            <div class="modal__text">
+              Sorry, we were unable to determine your location. Please give permission to use
+              geolocation, or enter the coordinates manually. <br />
+              <span>Latitude and longitude separated by commas.</span>
+            </div>
+            <form class="modal__form">
+              <input
+                type="text"
+                class="form__input"
+                name="coordinates"
+                placeholder="Enter your coordinates, for example: 51.50851, 00.12572"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

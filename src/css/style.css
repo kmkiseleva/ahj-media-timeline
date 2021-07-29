@@ -1,0 +1,145 @@
+body {
+  background-image: url('../img/back-5.jpg');
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+#main {
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.tweets {
+  margin: 0 auto;
+  width: 70%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.tweets__title {
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 40px;
+}
+
+.tweets__content {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.tweets__post {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.post__header {
+  font-size: 12px;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.post__body {
+  margin-bottom: 10px;
+}
+
+.post__text {
+  font-size: 24px;
+}
+
+.post__icon {
+  display: block;
+  width: 15px;
+  height: 20px;
+  background-image: url('../img/geo-pic.svg');
+  background-repeat: no-repeat;
+  margin-right: 5px;
+}
+
+.post__coordinates {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.tweets__footer {
+  width: 100%;
+  position: relative;
+}
+
+.footer__input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.modal {
+  display: block;
+}
+
+.modal__background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+
+.modal__content {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 30%;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 550px;
+  border-radius: 5px;
+  border: 1px solid black;
+  transition: all 0.5s ease-out;
+  padding: 20px;
+  z-index: 20;
+  font-size: 24px;
+  background-color: white;
+}
+
+.modal__text span {
+  font-weight: bold;
+}
+
+.modal__form,
+.form__input {
+  width: 100%;
+}
+
+.form__input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
